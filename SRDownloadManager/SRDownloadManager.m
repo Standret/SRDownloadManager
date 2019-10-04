@@ -201,6 +201,11 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
     }
 }
 
+- (NSString *)localURL:(NSURL *)URL {
+    return SRFilePath(URL);
+}
+
+
 #pragma mark - NSURLSessionDataDelegate
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(nonnull void (^)(NSURLSessionResponseDisposition))completionHandler {

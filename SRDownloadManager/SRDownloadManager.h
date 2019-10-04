@@ -52,6 +52,8 @@ typedef NS_ENUM(NSInteger, SRWaitingQueueMode) {
 
 #pragma mark - Downloads
 
+- (NSString *)localURL:(NSURL *)URL;
+
 /**
  Suspend the download of the URL.
  */
